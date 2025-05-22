@@ -12,7 +12,7 @@ const Navbar = ({ handleOrderPopup, searchQuery, setSearchQuery, handleSearchSub
   const categories = [
     { id: 1, name: "Home", link: "/" },
     { id: 2, name: "Top Rated", link: "/top-rated" },
-    { id: 3, name: "Kids clothing", link: "/kids-clothing" },
+    { id: 3, name: "Kids ", link: "/kids" },
     { id: 4, name: "Mens clothing", link: "/mens-clothing" }, 
     { id: 5, name: "Womens clothing", link: "/womens-clothing" },
     { id: 6, name: "Electronic", link: "/electronic" },

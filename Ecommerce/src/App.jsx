@@ -70,7 +70,7 @@ function App() {
           } 
         />
         <Route 
-          path="/kids-clothing" 
+          path="/kids" 
           element={
             <KidsClothing 
               handleOrderPopup={handleOrderPopup}

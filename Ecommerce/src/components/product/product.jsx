@@ -115,7 +115,7 @@ const productsData = [
     originalPrice: 837.85,
     rating: 1,
     reviews: 322,
-    image: "https://example.com/images/product_9.jpg",
+    image: "https://m.media-amazon.com/images/I/71x03iC+fqL._AC_UF1000,1000_QL80_.jpg",
     onSale: false,
     trending: false,
     description: "Fun and safe for kids of all ages."

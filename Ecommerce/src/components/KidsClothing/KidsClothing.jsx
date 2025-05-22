@@ -16,7 +16,7 @@ const KidsClothing = ({ handleOrderPopup, searchQuery = "" }) => {
   return (
     <div className="container mx-auto px-4 py-12">
       <h2 className="text-3xl font-bold text-center text-black dark:text-white mb-10">
-        Kids Clothing
+        Kids 
       </h2>
 
       {kidsProducts.length === 0 ? (
