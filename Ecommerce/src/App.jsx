@@ -3,7 +3,7 @@ import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
-// Import all your components
+// Components
 import Navbar from "./components/Navbar/navbar";
 import Footer from "./components/footer/footer";
 import Banner from "./components/banner/banner";
@@ -16,13 +16,11 @@ import TopProducts from "./components/topproducts/TopRatedProducts";
 import Electronic from "./components/Electronic/electronic";
 import Trending from "./components/Trending/trending";
 import BestSelling from "./components/Bestselling/bestselling";
+import CartPage from "./components/cart/CartPage";
 
 function App() {
   const [orderPopup, setOrderPopup] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [filteredProducts, setFilteredProducts] = useState([]);
-
-  const handleOrderPopup = () => setOrderPopup(!orderPopup);
 
   const handleSearchSubmit = (query) => {
     setSearchQuery(query);
@@ -41,11 +39,11 @@ function App() {
   return (
     <div className="bg-white dark:bg-slate-900 text-gray-900 dark:text-white">
       <Navbar 
-        handleOrderPopup={handleOrderPopup} 
         searchQuery={searchQuery} 
         setSearchQuery={setSearchQuery}
         handleSearchSubmit={handleSearchSubmit}
       />
+      
       <Routes>
         <Route
           path="/"
@@ -54,7 +52,7 @@ function App() {
               <Banner />
               <HeroSection />
               <Products 
-                handleOrderPopup={handleOrderPopup} 
+                handleOrderPopup={setOrderPopup} 
                 searchQuery={searchQuery}
               />
             </>
@@ -62,66 +60,37 @@ function App() {
         />
         <Route 
           path="/mens-clothing" 
-          element={
-            <MensClothing 
-              handleOrderPopup={handleOrderPopup}
-              searchQuery={searchQuery}
-            />
-          } 
+          element={<MensClothing handleOrderPopup={setOrderPopup} searchQuery={searchQuery} />} 
         />
         <Route 
           path="/kids" 
-          element={
-            <KidsClothing 
-              handleOrderPopup={handleOrderPopup}
-              searchQuery={searchQuery}
-            />
-          } 
+          element={<KidsClothing handleOrderPopup={setOrderPopup} searchQuery={searchQuery} />} 
         />
         <Route 
           path="/womens-clothing" 
-          element={
-            <WomensClothing 
-              handleOrderPopup={handleOrderPopup}
-              searchQuery={searchQuery}
-            />
-          } 
+          element={<WomensClothing handleOrderPopup={setOrderPopup} searchQuery={searchQuery} />} 
         />
         <Route 
           path="/top-rated" 
-          element={
-            <TopProducts 
-              handleOrderPopup={handleOrderPopup}
-              searchQuery={searchQuery}
-            />
-          } 
+          element={<TopProducts handleOrderPopup={setOrderPopup} searchQuery={searchQuery} />} 
         />
         <Route 
           path="/electronic" 
-          element={
-            <Electronic 
-              handleOrderPopup={handleOrderPopup}
-              searchQuery={searchQuery}
-            />
-          } 
+          element={<Electronic handleOrderPopup={setOrderPopup} searchQuery={searchQuery} />} 
         />
         <Route 
           path="/trending" 
-          element={
-            <Trending 
-              handleOrderPopup={handleOrderPopup}
-              searchQuery={searchQuery}
-            />
-          } 
+          element={<Trending handleOrderPopup={setOrderPopup} searchQuery={searchQuery} />} 
         />
         <Route 
           path="/bestselling" 
-          element={
-            <BestSelling 
-              handleOrderPopup={handleOrderPopup}
-              searchQuery={searchQuery}
-            />
-          } 
+          element={<BestSelling handleOrderPopup={setOrderPopup} searchQuery={searchQuery} />} 
+        />
+          
+        
+        <Route 
+          path="/cart" 
+          element={<CartPage cartItems={cartItems} />} 
         />
       </Routes>
       <Footer />

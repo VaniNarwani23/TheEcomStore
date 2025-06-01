@@ -5,30 +5,30 @@ import { FiShoppingBag } from 'react-icons/fi';
 import { Link, useNavigate } from 'react-router-dom';
 import DarkMode from './Darkmode';
 
-const Navbar = ({ handleOrderPopup, searchQuery, setSearchQuery, handleSearchSubmit }) => {
+const Navbar = ({ searchQuery, setSearchQuery, handleSearchSubmit }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const navigate = useNavigate();
 
   const categories = [
     { id: 1, name: "Home", link: "/" },
     { id: 2, name: "Top Rated", link: "/top-rated" },
-    { id: 3, name: "Kids ", link: "/kids" },
-    { id: 4, name: "Mens clothing", link: "/mens-clothing" }, 
+    { id: 3, name: "Kids", link: "/kids" },
+    { id: 4, name: "Mens clothing", link: "/mens-clothing" },
     { id: 5, name: "Womens clothing", link: "/womens-clothing" },
     { id: 6, name: "Electronic", link: "/electronic" },
   ];
 
   const trendingDropdown = [
-    { id: 1, name: "Trending Products", link:"/trending"  },
-    { id: 2, name: "Best Selling", link: "/bestselling"},
+    { id: 1, name: "Trending Products", link: "/trending" },
+    { id: 2, name: "Best Selling", link: "/bestselling" },
   ];
 
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       handleSearchSubmit(searchQuery);
-      navigate('/'); // Navigate to home or search results page
-      setMobileMenuOpen(false); // Close mobile menu if open
+      navigate('/');
+      setMobileMenuOpen(false);
     }
   };
 
@@ -43,7 +43,7 @@ const Navbar = ({ handleOrderPopup, searchQuery, setSearchQuery, handleSearchSub
             <span className="text-black dark:text-white">TheEcomStore</span>
           </Link>
 
-          {/* Search - Desktop only */}
+          {/* Search - Desktop */}
           <form onSubmit={handleSearch} className="relative group hidden sm:flex flex-1 max-w-xl mx-4">
             <input
               type="text"
@@ -52,8 +52,8 @@ const Navbar = ({ handleOrderPopup, searchQuery, setSearchQuery, handleSearchSub
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full rounded-lg border border-gray-300 py-1 px-4 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white"
             />
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               className="absolute right-3 top-1/2 transform -translate-y-1/2"
               disabled={!searchQuery.trim()}
             >
@@ -63,14 +63,16 @@ const Navbar = ({ handleOrderPopup, searchQuery, setSearchQuery, handleSearchSub
 
           {/* Cart + Dark Mode + Mobile Toggle */}
           <div className="flex items-center gap-4">
-            <button
-              onClick={handleOrderPopup}
+            <Link
+              to="/cart"
               className="bg-gradient-to-t from-purple-300 to-blue-400 hover:from-purple-400 hover:to-blue-500 transition-all duration-200 text-white py-1 px-4 rounded-full flex items-center gap-2"
             >
               <span className="hidden md:inline">Cart</span>
               <FaCartShopping className="text-lg" />
-            </button>
+            </Link>
+
             <DarkMode />
+
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="sm:hidden text-gray-700 dark:text-gray-300 focus:outline-none"
@@ -92,14 +94,13 @@ const Navbar = ({ handleOrderPopup, searchQuery, setSearchQuery, handleSearchSub
       {/* Desktop Navigation */}
       <div className="hidden sm:flex justify-center items-center gap-6 py-3">
         {categories.map((category) => (
-          <div key={category.id} className="relative group">
-            <Link
-              to={category.link}
-              className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-            >
-              {category.name}
-            </Link>
-          </div>
+          <Link
+            key={category.id}
+            to={category.link}
+            className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+          >
+            {category.name}
+          </Link>
         ))}
 
         {/* Trending Dropdown */}
@@ -133,8 +134,8 @@ const Navbar = ({ handleOrderPopup, searchQuery, setSearchQuery, handleSearchSub
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full rounded-lg border border-gray-300 py-2 px-4 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
             />
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               className="absolute right-3 top-1/2 transform -translate-y-1/2"
               disabled={!searchQuery.trim()}
             >
@@ -153,7 +154,7 @@ const Navbar = ({ handleOrderPopup, searchQuery, setSearchQuery, handleSearchSub
             </Link>
           ))}
 
-          <div className="border-t border-gray-200 dark:border-gray-700 my-2"></div>
+          <div className="border-t border-gray-200 dark:border-gray-700 my-2" />
 
           <p className="px-3 py-2 text-sm font-medium text-gray-500 dark:text-gray-400">Trending</p>
           {trendingDropdown.map((item) => (

@@ -48,7 +48,7 @@ const productsData = [
     originalPrice: 538.92,
     rating: 5,
     reviews: 181,
-    image: "https://example.com/images/product_2.jpg",
+    image: "https://samstoy.in/cdn/shop/files/Children-Electric-Dancing-Robots-for-Kids-Toy-Rock-Light-Music-Early-Education-Walking-Hot-Seller-Toys-Boys-Girls-Babys-Toddlers-samstoy-in-2505.jpg?v=1724871447",
     onSale: false,
     trending: true,
     description: "Fun and safe for kids of all ages."
@@ -61,7 +61,7 @@ const productsData = [
     originalPrice: 791.17,
     rating: 3,
     reviews: 421,
-    image: "https://example.com/images/product_3.jpg",
+    image: "https://viaanakidsstore.com/cdn/shop/files/3B34D83E-8846-456D-BE0A-B1DB051B18CA.jpg?v=1691299073",
     onSale: false,
     trending: true,
     description: "Fun and safe for kids of all ages."
@@ -87,7 +87,7 @@ const productsData = [
     originalPrice: 541.21,
     rating: 5,
     reviews: 97,
-    image: "https://example.com/images/product_5.jpg",
+    image: "https://images.ctfassets.net/hmm5mo4qf4mf/5OdlQsrRweJDlAR3OzkERY/3249c2a84d1a52bc3d7d2b892fa1162c/666a8680fbff440384dc74d49ed324b8-933.png?fm=webp&q=90&fit=scale&w=1920",
     onSale: true,
     trending: false,
     description: "High-quality electronic gadget with advanced features."
@@ -100,7 +100,7 @@ const productsData = [
     originalPrice: 827.46,
     rating: 1,
     reviews: 239,
-    image: "https://example.com/images/product_6.jpg",
+    image: "https://img.kwcdn.com/product/fancy/5259b35c-128b-4022-b558-d00894f9ce8d.jpg?imageView2/2/w/500/q/60/format/webp",
     onSale: true,
     trending: true,
     description: "Fun and safe for kids of all ages."
@@ -114,7 +114,7 @@ const productsData = [
     rating: 5,
     isTopRated: true,
     reviews: 170,
-    image: "https://example.com/images/product_7.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRlmAw5y-UMbqgWXOWuysQjcJ5NgJY_donqg&s",
     onSale: false,
     trending: false,
     description: "Elegant and fashionable women's clothing item."
@@ -127,7 +127,7 @@ const productsData = [
     originalPrice: 566.25,
     rating: 3,
     reviews: 324,
-    image: "https://example.com/images/product_8.jpg",
+    image: "https://i.ebayimg.com/images/g/IVcAAOSwtARnRJ8-/s-l1200.jpg",
     onSale: false,
     trending: true,
     description: "High-quality electronic gadget with advanced features."
@@ -140,7 +140,7 @@ const productsData = [
     originalPrice: 837.85,
     rating: 1,
     reviews: 322,
-    image: "https://example.com/images/product_9.jpg",
+    image: "https://x.cloudsdata.net/kg/images/products/large/RAV03148-000-238058-.jpg",
     onSale: false,
     trending: false,
     description: "Fun and safe for kids of all ages."
@@ -153,7 +153,7 @@ const productsData = [
     originalPrice: 631.94,
     rating: 3,
     reviews: 331,
-    image: "https://example.com/images/product_10.jpg",
+    image: "https://n.nordstrommedia.com/it/9dee2da9-6495-4c97-8527-502db994252e.jpeg?h=368&w=240&dpr=2",
     onSale: false,
     trending: false,
     description: "Elegant and fashionable women's clothing item."
@@ -167,7 +167,7 @@ const productsData = [
     rating: 1,
     reviews: 473,
     isTopRated: true,
-    image: "https://example.com/images/product_11.jpg",
+    image: "https://m.media-amazon.com/images/I/610ub5kytVL.jpg",
     onSale: true,
     trending: true,
     description: "High-quality electronic gadget with advanced features."
@@ -180,7 +180,7 @@ const productsData = [
     originalPrice: 770.42,
     rating: 5,
     reviews: 78,
-    image: "https://example.com/images/product_12.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoc3GwV1GYZWiYv00pes0YwVfZWKSqOIyRBA&s",
     onSale: false,
     trending: true,
     description: "High-quality electronic gadget with advanced features."
@@ -193,7 +193,7 @@ const productsData = [
     originalPrice: 917.79,
     rating: 3,
     reviews: 161,
-    image: "https://example.com/images/product_13.jpg",
+    image: "https://images-cdn.ubuy.co.in/668171a05cee002a0530085b-womens-summer-tops-womens-summer-tops.jpg",
     onSale: false,
     trending: false,
     description: "Elegant and fashionable women's clothing item."
@@ -206,7 +206,7 @@ const productsData = [
     originalPrice: 650.26,
     rating: 5,
     reviews: 492,
-    image: "https://example.com/images/product_14.jpg",
+    image: "https://www.wilson.com/sites/default/files/Classic%20Pleated.jpg",
     onSale: false,
     trending: false,
     description: "Elegant and fashionable women's clothing item."
@@ -219,7 +219,7 @@ const productsData = [
     originalPrice: 569.04,
     rating: 5,
     reviews: 94,
-    image: "https://example.com/images/product_15.jpg",
+    image: "https://th.bing.com/th/id/OIP.VUVYEbc9VI-xtJfB91ZpHAAAAA?rs=1&pid=ImgDetMain",
     onSale: true,
     trending: false,
     description: "Elegant and fashionable women's clothing item."
@@ -232,7 +232,7 @@ const productsData = [
     originalPrice: 523.33,
     rating: 2,
     reviews: 378,
-    image: "https://example.com/images/product_16.jpg",
+    image: "https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2018/08/BenQ_EX3203R_1.jpg",
     onSale: true,
     trending: false,
     description: "High-quality electronic gadget with advanced features."
@@ -245,7 +245,7 @@ const productsData = [
     originalPrice: 671.71,
     rating: 4,
     reviews: 46,
-    image: "https://example.com/images/product_17.jpg",
+    image: "https://th.bing.com/th/id/OIP.bkE-YjiiQiKeddbf0v7m7QHaIU?w=208&h=234&c=7&r=0&o=5&dpr=1.3&pid=1.7",
     onSale: false,
     trending: false,
     description: "Stylish and comfortable men's clothing item."
@@ -258,7 +258,7 @@ const productsData = [
     originalPrice: 620.6,
     rating: 3,
     reviews: 379,
-    image: "https://example.com/images/product_18.jpg",
+    image: "https://i.pinimg.com/originals/6d/47/0a/6d470a0c998ae3b81c8f609f0220831d.jpg",
     onSale: false,
     trending: true,
     description: "Stylish and comfortable men's clothing item."
@@ -272,7 +272,7 @@ const productsData = [
     isTopRated: true,
     rating: 3,
     reviews: 418,
-    image: "https://example.com/images/product_19.jpg",
+    image: "https://vibegaming.com.bd/wp-content/uploads/2021/09/https___hybrismediaprod.blob_.core_.windows.net_sys-master-phoenix-images-container_h97_h6f_9081449250846_razer-basilisk-v2-gallery-2-1500x1000-1.jpg",
     onSale: false,
     trending: false,
     description: "High-quality electronic gadget with advanced features."
@@ -285,7 +285,7 @@ const productsData = [
     originalPrice: 723.05,
     rating: 1,
     reviews: 483,
-    image: "https://example.com/images/product_20.jpg",
+    image: "https://i.zoomtventertainment.com/media/100945631_237376254384025_7220094459307546412_n.jpg",
     onSale: true,
     trending: true,
     description: "Elegant and fashionable women's clothing item."
@@ -299,7 +299,7 @@ const productsData = [
     isTopRated: true,
     rating: 2,
     reviews: 353,
-    image: "https://example.com/images/product_21.jpg",
+    image: "https://th.bing.com/th/id/OIP.B38OENTaZHgf-6OcZZPLiAHaHa?rs=1&pid=ImgDetMain",
     onSale: false,
     trending: false,
     description: "Fun and safe for kids of all ages."
@@ -326,7 +326,7 @@ const productsData = [
     originalPrice: 624.81,
     rating: 3,
     reviews: 497,
-    image: "https://example.com/images/product_23.jpg",
+    image: "https://images-na.ssl-images-amazon.com/images/I/51yQidO2fML._AC_UX679_.jpg",
     onSale: true,
     trending: false,
     description: "Stylish and comfortable men's clothing item."
@@ -509,7 +509,7 @@ const productsData = [
     originalPrice: 972.65,
     rating: 1,
     reviews: 346,
-    image: "https://example.com/images/product_37.jpg",
+    image: "https://m.media-amazon.com/images/I/61X+8csYlwL._SL1500_.jpg",
     onSale: false,
     trending: true,
     description: "High-quality electronic gadget with advanced features."
@@ -691,8 +691,7 @@ const productsData = [
     originalPrice: 582.87,
     rating: 4,
     reviews: 287,
-    image: "https://assets.ajio.com/medias/sys_master/root/20240621/Istq/6674abde1d763220fae1314f/-473Wx593H-700109912-black-MODEL.jpg",
-    onSale: true,
+    image: "https://cdn.fcglcdn.com/brainbees/images/products/583x720/18739901a.webp",
     trending: true,
     description: "Fun and safe for kids of all ages."
   },
@@ -821,7 +820,7 @@ const productsData = [
     originalPrice: 731.41,
     rating: 1,
     reviews: 495,
-    image: "https://example.com/images/product_61.jpg",
+    image: "https://www.wepc.com/wp-content/uploads/2019/05/DSC02079-1-scaled.jpg",
     onSale: false,
     trending: true,
     description: "High-quality electronic gadget with advanced features."
@@ -860,7 +859,7 @@ const productsData = [
     originalPrice: 977.75,
     rating: 3,
     reviews: 499,
-    image: "https://example.com/images/product_64.jpg",
+    image: "https://www.aestheticroomcore.com/cdn/shop/products/b4_49bd253a-606c-42ee-b313-dc7c9c50ffd4_1800x1800.jpg?v=1634905600",
     onSale: true,
     trending: false,
     description: "High-quality electronic gadget with advanced features."
@@ -873,7 +872,7 @@ const productsData = [
     originalPrice: 937.7,
     rating: 4,
     reviews: 143,
-    image: "https://example.com/images/product_65.jpg",
+    image: "https://i5.walmartimages.com/seo/AO-ALI-VICTORY-Backpack-for-Girls-Waterproof-Kids-Backpacks-School-Bag-Toddler-Bookbags-Cute-Travel-Daypack-Large-A-Black_0d9f4496-8c10-4920-94d9-36a259275d4d.f408f2e7ea6254b9414542291a9a629f.jpeg",
     onSale: true,
     trending: true,
     description: "Fun and safe for kids of all ages."
@@ -899,7 +898,7 @@ const productsData = [
     originalPrice: 548.69,
     rating: 5,
     reviews: 243,
-    image: "https://example.com/images/product_67.jpg",
+    image: "https://image.made-in-china.com/2f0j00apJULWodYrcG/Rolling-Wheeled-Trolley-Double-Shoulder-Student-Schoolbag-Child-Children-School-Backpack-Pack-Bag-with-6-Wheels-CY9860-.jpg",
     onSale: true,
     trending: false,
     description: "Fun and safe for kids of all ages."
@@ -1055,7 +1054,7 @@ const productsData = [
     originalPrice: 841.52,
     rating: 3,
     reviews: 51,
-    image: "https://example.com/images/product_79.jpg",
+    image: "https://cdn.fcglcdn.com/brainbees/images/products/583x720/18739919a.webp",
     onSale: false,
     trending: false,
     description: "Fun and safe for kids of all ages."
@@ -1133,7 +1132,7 @@ const productsData = [
     originalPrice: 831.5,
     rating: 5,
     reviews: 300,
-    image: "https://example.com/images/product_85.jpg",
+    image: "https://th.bing.com/th/id/OIP.AvYlmscvCWboTe_tjTBuBAHaHa?rs=1&pid=ImgDetMain",
     onSale: true,
     trending: false,
     description: "Fun and safe for kids of all ages."
@@ -1406,7 +1405,7 @@ const productsData = [
     originalPrice: 866.71,
     rating: 2,
     reviews: 114,
-    image: "https://example.com/images/product_106.jpg",
+    image: "https://cdn.fcglcdn.com/brainbees/images/products/583x720/18705297a.webp",
     onSale: true,
     trending: true,
     description: "Fun and safe for kids of all ages."
@@ -1471,7 +1470,7 @@ const productsData = [
     originalPrice: 862.6,
     rating: 1,
     reviews: 272,
-    image: "https://example.com/images/product_111.jpg",
+    image: "https://i5.walmartimages.com/asr/d1b4fb6a-202d-4365-8d0e-3fbe2c1f4f8a.79c40acd1d0705e09d63634699248fdd.jpeg",
     onSale: true,
     trending: true,
     description: "Stylish and comfortable men's clothing item."
@@ -1575,7 +1574,7 @@ const productsData = [
     originalPrice: 811.88,
     rating: 3,
     reviews: 70,
-    image: "https://example.com/images/product_119.jpg",
+    image: "https://th.bing.com/th/id/R.c4016ea1a6ab9b2025f585977118c97b?rik=JM3keQGyJ7n%2fRw&riu=http%3a%2f%2falexnld.com%2fwp-content%2fuploads%2f2015%2f10%2f3249.jpg&ehk=Fr1dgqOnp6JyE7JaTWFU4q0GBXOWO%2fYeqnpHYbHOWkc%3d&risl=&pid=ImgRaw&r=0",
     onSale: false,
     trending: true,
     description: "Fun and safe for kids of all ages."
@@ -1601,7 +1600,7 @@ const productsData = [
     originalPrice: 711.86,
     rating: 4,
     reviews: 161,
-    image: "https://example.com/images/product_121.jpg",
+    image: "https://media.landmarkshops.in/cdn-cgi/image/h=831,w=615,q=85,fit=cover/max-new/1000015155848-Blue-BLUE-1000015155848_01-2100.jpg",
     onSale: true,
     trending: false,
     description: "Fun and safe for kids of all ages."
@@ -1731,7 +1730,7 @@ const productsData = [
     originalPrice: 646.74,
     rating: 3,
     reviews: 438,
-    image: "https://example.com/images/product_131.jpg",
+    image: "https://th.bing.com/th/id/OIP.bPqrFZTHVlmQPBBKmP3VLAHaHa?w=640&h=640&rs=1&pid=ImgDetMain",
     onSale: true,
     trending: true,
     description: "Fun and safe for kids of all ages."
@@ -1887,7 +1886,7 @@ const productsData = [
     originalPrice: 746.94,
     rating: 3,
     reviews: 293,
-    image: "https://example.com/images/product_143.jpg",
+    image: "https://rukminim2.flixcart.com/image/832/832/xif0q/backpack/2/m/3/kids-stylish-junior-school-bag-backpacks-cartoon-boy-girl-baby-3-original-imagj7efgxehujqr.jpeg?q=70",
     onSale: true,
     trending: true,
     description: "Fun and safe for kids of all ages."
@@ -1965,7 +1964,7 @@ const productsData = [
     originalPrice: 721.6,
     rating: 5,
     reviews: 306,
-    image: "https://example.com/images/product_149.jpg",
+    image: "https://i.pinimg.com/originals/98/0c/9d/980c9defbb58db98c8c70e73284a52ae.jpg",
     onSale: true,
     trending: false,
     description: "High-quality electronic gadget with advanced features."
@@ -2147,7 +2146,7 @@ const productsData = [
     originalPrice: 626.4,
     rating: 3,
     reviews: 251,
-    image: "https://example.com/images/product_163.jpg",
+    image: "https://th.bing.com/th/id/OIP.qXks-5fLjttjKb1kcMvlywAAAA?rs=1&pid=ImgDetMain",
     onSale: false,
     trending: true,
     description: "High-quality electronic gadget with advanced features."
@@ -2173,7 +2172,7 @@ const productsData = [
     originalPrice: 836.3,
     rating: 5,
     reviews: 407,
-    image: "https://example.com/images/product_165.jpg",
+    image: "https://cdn.fcglcdn.com/brainbees/images/products/583x720/17381543a.webp",
     onSale: true,
     trending: true,
     description: "Fun and safe for kids of all ages."
@@ -2329,7 +2328,7 @@ const productsData = [
     originalPrice: 660.33,
     rating: 1,
     reviews: 188,
-    image: "https://example.com/images/product_177.jpg",
+    image: "https://cdn.fcglcdn.com/brainbees/images/products/583x720/19314778a.webp",
     onSale: false,
     trending: true,
     description: "Fun and safe for kids of all ages."
@@ -2472,7 +2471,7 @@ const productsData = [
     originalPrice: 939.87,
     rating: 5,
     reviews: 140,
-    image: "https://example.com/images/product_188.jpg",
+    image: "https://cdn.fcglcdn.com/brainbees/images/products/583x720/16673037a.webp",
     onSale: true,
     trending: true,
     description: "Fun and safe for kids of all ages."
@@ -2615,7 +2614,7 @@ const productsData = [
     originalPrice: 535.92,
     rating: 4,
     reviews: 49,
-    image: "https://example.com/images/product_199.jpg",
+    image: "https://media-uk.landmarkshops.in/cdn-cgi/image/h=831,w=615,q=85,fit=cover/max-new/1000013314666-Multi-MULTI-1000013314666_01-2100.jpg",
     onSale: false,
     trending: true,
     description: "Fun and safe for kids of all ages."
@@ -2862,7 +2861,7 @@ const productsData = [
     originalPrice: 686.12,
     rating: 2,
     reviews: 265,
-    image: "https://example.com/images/product_218.jpg",
+    image: "https://th.bing.com/th/id/OPAC.fuCUW1GBOOpRRA474C474?w=592&h=550&o=5&dpr=1.3&pid=21.1",
     onSale: false,
     trending: false,
     description: "High-quality electronic gadget with advanced features."
