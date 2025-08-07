@@ -1,5 +1,4 @@
 import AOS from "aos";
-import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
@@ -21,10 +20,42 @@ import CartPage from "./components/cart/CartPage";
 function App() {
   const [orderPopup, setOrderPopup] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [cartItems, setCartItems] = useState([]);
 
   const handleSearchSubmit = (query) => {
     setSearchQuery(query);
   };
+
+  const addToCart = (product) => {
+    setCartItems(prevItems => {
+      const existingItem = prevItems.find(item => item.id === product.id);
+      if (existingItem) {
+        return prevItems.map(item =>
+          item.id === product.id 
+            ? { ...item, quantity: item.quantity + 1 } 
+            : item
+        );
+      }
+      return [...prevItems, { ...product, quantity: 1 }];
+    });
+  };
+
+  const removeFromCart = (productId) => {
+    setCartItems(prevItems => prevItems.filter(item => item.id !== productId));
+  };
+
+  const updateQuantity = (productId, newQuantity) => {
+    if (newQuantity < 1) return;
+    setCartItems(prevItems =>
+      prevItems.map(item =>
+        item.id === productId 
+          ? { ...item, quantity: newQuantity } 
+          : item
+      )
+    );
+  };
+
+  const cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   useEffect(() => {
     AOS.init({
@@ -42,6 +73,7 @@ function App() {
         searchQuery={searchQuery} 
         setSearchQuery={setSearchQuery}
         handleSearchSubmit={handleSearchSubmit}
+        cartItemCount={cartItemCount}
       />
       
       <Routes>
@@ -54,45 +86,93 @@ function App() {
               <Products 
                 handleOrderPopup={setOrderPopup} 
                 searchQuery={searchQuery}
+                addToCart={addToCart}
               />
             </>
           }
         />
         <Route 
           path="/mens-clothing" 
-          element={<MensClothing handleOrderPopup={setOrderPopup} searchQuery={searchQuery} />} 
+          element={
+            <MensClothing 
+              handleOrderPopup={setOrderPopup} 
+              searchQuery={searchQuery}
+              addToCart={addToCart}
+            />
+          } 
         />
         <Route 
           path="/kids" 
-          element={<KidsClothing handleOrderPopup={setOrderPopup} searchQuery={searchQuery} />} 
+          element={
+            <KidsClothing 
+              handleOrderPopup={setOrderPopup} 
+              searchQuery={searchQuery}
+              addToCart={addToCart}
+            />
+          } 
         />
         <Route 
           path="/womens-clothing" 
-          element={<WomensClothing handleOrderPopup={setOrderPopup} searchQuery={searchQuery} />} 
+          element={
+            <WomensClothing 
+              handleOrderPopup={setOrderPopup} 
+              searchQuery={searchQuery}
+              addToCart={addToCart}
+            />
+          } 
         />
         <Route 
           path="/top-rated" 
-          element={<TopProducts handleOrderPopup={setOrderPopup} searchQuery={searchQuery} />} 
+          element={
+            <TopProducts 
+              handleOrderPopup={setOrderPopup} 
+              searchQuery={searchQuery}
+              addToCart={addToCart}
+            />
+          } 
         />
         <Route 
           path="/electronic" 
-          element={<Electronic handleOrderPopup={setOrderPopup} searchQuery={searchQuery} />} 
+          element={
+            <Electronic 
+              handleOrderPopup={setOrderPopup} 
+              searchQuery={searchQuery}
+              addToCart={addToCart}
+            />
+          } 
         />
         <Route 
           path="/trending" 
-          element={<Trending handleOrderPopup={setOrderPopup} searchQuery={searchQuery} />} 
+          element={
+            <Trending 
+              handleOrderPopup={setOrderPopup} 
+              searchQuery={searchQuery}
+              addToCart={addToCart}
+            />
+          } 
         />
         <Route 
           path="/bestselling" 
-          element={<BestSelling handleOrderPopup={setOrderPopup} searchQuery={searchQuery} />} 
+          element={
+            <BestSelling 
+              handleOrderPopup={setOrderPopup} 
+              searchQuery={searchQuery}
+              addToCart={addToCart}
+            />
+          } 
         />
-          
-        
         <Route 
           path="/cart" 
-          element={<CartPage cartItems={cartItems} />} 
+          element={
+            <CartPage 
+              cartItems={cartItems}
+              removeFromCart={removeFromCart}
+              updateQuantity={updateQuantity}
+            />
+          } 
         />
       </Routes>
+
       <Footer />
     </div>
   );
