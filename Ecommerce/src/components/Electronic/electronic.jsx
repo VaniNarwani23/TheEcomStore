@@ -1,9 +1,8 @@
 import React from 'react';
 import ProductCard from '../product/ProductCard';
 import productsData from '../product/products';
-import { motion } from "framer-motion"; 
 
-const Electronics = ({ handleOrderPopup, searchQuery = "" }) => {
+const Electronics = ({ handleOrderPopup, searchQuery = "", addToCart, toggleWishlist, isWishlisted }) => {
   // Filter products by electronics category and search query
   const electronicsProducts = productsData.filter((product) => {
     const categoryMatch = product.category === 'electronics';
@@ -15,15 +14,23 @@ const Electronics = ({ handleOrderPopup, searchQuery = "" }) => {
   });
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      {/* 🔹 Centered heading */}
-      <h2 className="text-3xl font-bold text-center text-black dark:text-white mb-10">
-        Electronic Collection
-      </h2>
-
+    <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      {/* Premium Header Banner */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-800 dark:to-purple-800 py-12 shadow-lg">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center gap-3 mb-3">
+            <span className="text-4xl">📱</span>
+            <h1 className="text-4xl md:text-5xl font-black text-white">Electronics</h1>
+          </div>
+          <p className="text-blue-100 text-lg">Discover the latest gadgets and technology at unbeatable prices</p>
+          <p className="text-blue-100 mt-2 font-semibold">{electronicsProducts.length} products available</p>
+        </div>
+      </div>
+      
+      <div className="container mx-auto px-4 py-12">
       {electronicsProducts.length === 0 ? (
-        <div className="text-center py-12">
-          <h3 className="text-xl text-gray-600 dark:text-gray-400">
+        <div className="text-center py-20 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border-2 border-dashed border-gray-300 dark:border-gray-600">
+          <h3 className="text-2xl font-bold text-gray-600 dark:text-gray-400">
             No products found
           </h3>
           <p className="text-gray-500 dark:text-gray-500 mt-2">
@@ -36,11 +43,14 @@ const Electronics = ({ handleOrderPopup, searchQuery = "" }) => {
             <ProductCard
               key={product.id}
               product={product}
-              handleOrderPopup={handleOrderPopup}
+              addToCart={addToCart}
+              toggleWishlist={toggleWishlist}
+              isWishlisted={isWishlisted}
             />
           ))}
         </div>
       )}
+      </div>
     </div>
   );
 };

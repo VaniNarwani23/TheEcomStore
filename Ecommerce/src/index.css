@@ -1,3 +1,211 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Premium animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Container utility for responsive max-width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Custom scrollbar for better dark mode support */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, #f1f5f9, #e2e8f0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #3b82f6, #1e40af);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #1e40af, #1e3a8a);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, #1e293b, #0f172a);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #60a5fa, #3b82f6);
+  box-shadow: 0 0 10px rgba(96, 165, 250, 0.3);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #3b82f6, #2563eb);
+}
+
+/* Focus styles for better accessibility */
+*:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.dark *:focus-visible {
+  outline-color: #60a5fa;
+}
+
+/* Premium animations */
+.animate-slideInUp {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.animate-fadeInScale {
+  animation: fadeInScale 0.4s ease-out;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Custom button hover effects */
+.btn-hover-effect {
+  @apply transform hover:-translate-y-0.5 transition-all duration-200;
+}
+
+/* Custom card styles */
+.card {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700;
+}
+
+.card-hover {
+  @apply hover:shadow-lg hover:shadow-xl transition-shadow duration-300;
+}
+
+/* Custom input styles */
+.input-field {
+  @apply border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-400 dark:focus:border-blue-400 transition-colors;
+}
+
+/* Custom button styles */
+.btn-primary {
+  @apply bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-600;
+}
+
+.btn-secondary {
+  @apply bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 font-medium px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600;
+}
+
+/* Custom text styles */
+.text-primary {
+  @apply text-gray-900 dark:text-white;
+}
+
+.text-secondary {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+.text-muted {
+  @apply text-gray-500 dark:text-gray-400;
+}
+
+/* Custom background styles */
+.bg-primary {
+  @apply bg-white dark:bg-gray-800;
+}
+
+.bg-secondary {
+  @apply bg-gray-50 dark:bg-gray-900;
+}
+
+.bg-accent {
+  @apply bg-blue-50 dark:bg-blue-900/20;
+}
+
+/* Enhanced dark mode form styles */
+.form-input-dark {
+  @apply bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:ring-blue-400 focus:border-blue-400;
+}
+
+.form-input-light {
+  @apply bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500;
+}
+
+/* Dark mode card enhancements */
+.card-dark {
+  @apply bg-gray-800 border-gray-700 shadow-lg;
+}
+
+.card-light {
+  @apply bg-white border-gray-200 shadow-md;
+}
+
+/* Enhanced button states for dark mode */
+.btn-dark-primary {
+  @apply bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-xl focus:ring-blue-400;
+}
+
+.btn-light-primary {
+  @apply bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl focus:ring-blue-300;
+}
+
+/* Smooth dark mode transitions */
+.dark-mode-transition {
+  @apply transition-all duration-300 ease-in-out;
+}

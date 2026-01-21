@@ -2,7 +2,7 @@ import React from "react";
 import ProductCard from "../product/ProductCard";
 import productsData from "../product/products";
 
-const MensClothing = ({ handleOrderPopup, searchQuery = "" }) => {
+const MensClothing = ({ handleOrderPopup, searchQuery = "", addToCart, toggleWishlist, isWishlisted }) => {
   // Filter products by category and search query
   const filteredProducts = productsData.filter((product) => {
     const categoryMatch = product.category === "men";
@@ -14,15 +14,23 @@ const MensClothing = ({ handleOrderPopup, searchQuery = "" }) => {
   });
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <h2 className="text-3xl font-bold text-center text-black dark:text-white mb-10">
-        Mens Clothing
-      </h2>
-   
-
+    <div className="min-h-screen bg-gradient-to-br from-white via-pink-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      {/* Premium Header Banner */}
+      <div className="bg-gradient-to-r from-pink-500 to-red-500 dark:from-pink-700 dark:to-red-700 py-12 shadow-lg">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center gap-3 mb-3">
+            <span className="text-4xl">👔</span>
+            <h1 className="text-4xl md:text-5xl font-black text-white">Mens Clothing</h1>
+          </div>
+          <p className="text-red-100 text-lg">Premium quality clothing for the modern man</p>
+          <p className="text-red-100 mt-2 font-semibold">{filteredProducts.length} products available</p>
+        </div>
+      </div>
+      
+      <div className="container mx-auto px-4 py-12">
       {filteredProducts.length === 0 ? (
-        <div className="text-center py-12">
-          <h3 className="text-xl text-gray-600 dark:text-gray-400">
+        <div className="text-center py-20 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border-2 border-dashed border-gray-300 dark:border-gray-600">
+          <h3 className="text-2xl font-bold text-gray-600 dark:text-gray-400">
             No products found
           </h3>
           <p className="text-gray-500 dark:text-gray-500 mt-2">
@@ -35,13 +43,15 @@ const MensClothing = ({ handleOrderPopup, searchQuery = "" }) => {
             <ProductCard
               key={product.id}
               product={product}
-              handleOrderPopup={handleOrderPopup}
+              addToCart={addToCart}
+              toggleWishlist={toggleWishlist}
+              isWishlisted={isWishlisted}
             />
           ))}
         </div>
       )}
       </div>
-   
+    </div>
   );
 };
 

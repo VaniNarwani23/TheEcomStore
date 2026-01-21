@@ -1,11 +1,11 @@
 import React from 'react';
 import { IoMdSearch } from 'react-icons/io';
-import { FaCartShopping, FaCaretDown } from 'react-icons/fa6';
+import { FaCartShopping, FaCaretDown, FaHeart } from 'react-icons/fa6';
 import { FiShoppingBag } from 'react-icons/fi';
 import { Link, useNavigate } from 'react-router-dom';
 import DarkMode from './Darkmode';
 
-const Navbar = ({ searchQuery, setSearchQuery, handleSearchSubmit }) => {
+const Navbar = ({ searchQuery, setSearchQuery, handleSearchSubmit, cartItemCount = 0, wishlistCount = 0 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const navigate = useNavigate();
 
@@ -33,42 +33,66 @@ const Navbar = ({ searchQuery, setSearchQuery, handleSearchSubmit }) => {
   };
 
   return (
-    <div className="shadow-md bg-white dark:bg-gray-900 duration-200 sticky top-0 z-40">
-      {/* Top Bar */}
-      <div className="bg-purple-700/40 py-2">
+    <div className="shadow-lg bg-gradient-to-r from-white via-blue-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 duration-200 sticky top-0 z-40 border-b border-gray-200/50 dark:border-gray-700/50 backdrop-blur-sm">
+      {/* Premium Top Bar */}
+      <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 dark:from-purple-800 dark:via-blue-800 dark:to-indigo-800 py-2 shadow-md">
         <div className="container flex justify-between items-center gap-4 px-4">
           {/* Logo */}
-          <Link to="/" className="font-bold text-xl flex gap-1 items-center">
-            <FiShoppingBag size="30" className="text-black dark:text-white" />
-            <span className="text-black dark:text-white">TheEcomStore</span>
+          <Link to="/" className="font-bold text-xl flex gap-2 items-center group">
+            <div className="p-2 bg-white dark:bg-gray-900 rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110">
+              <FiShoppingBag size="24" className="text-blue-600 dark:text-blue-400" />
+            </div>
+            <span className="text-white font-black tracking-wider hidden sm:inline">TheEcomStore</span>
           </Link>
 
-          {/* Search - Desktop */}
-          <form onSubmit={handleSearch} className="relative group hidden sm:flex flex-1 max-w-xl mx-4">
+          {/* Search - Desktop Enhanced */}
+          <form onSubmit={handleSearch} className="relative group hidden sm:flex flex-1 max-w-2xl mx-4">
             <input
               type="text"
-              placeholder="Search products..."
+              placeholder="Search 1000+ products..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full rounded-lg border border-gray-300 py-1 px-4 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white"
+              className="w-full rounded-full py-3 px-6 pr-12 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:border-white dark:border-gray-600 dark:bg-gray-800 dark:text-white bg-white shadow-lg hover:shadow-xl transition-all duration-300"
             />
             <button
               type="submit"
-              className="absolute right-3 top-1/2 transform -translate-y-1/2"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-yellow-300 transition-colors duration-300"
               disabled={!searchQuery.trim()}
             >
-              <IoMdSearch className="text-gray-500 group-hover:text-indigo-600 dark:text-gray-400 dark:group-hover:text-indigo-400" />
+              <IoMdSearch className="text-xl" />
             </button>
           </form>
 
-          {/* Cart + Dark Mode + Mobile Toggle */}
-          <div className="flex items-center gap-4">
+          {/* Wishlist + Cart + Dark Mode + Mobile Toggle */}
+          <div className="flex items-center gap-3">
+            {/* Wishlist Button */}
+            <Link
+              to="/wishlist"
+              className="relative bg-gradient-to-br from-red-400 to-pink-500 hover:from-red-500 hover:to-pink-600 transition-all duration-300 text-white py-2 px-4 rounded-full flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-110 hidden sm:flex"
+              title="View Wishlist"
+            >
+              <span className="hidden lg:inline text-sm font-bold">Wishlist</span>
+              <FaHeart className="text-lg animate-pulse-subtle" />
+              {wishlistCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-yellow-400 text-red-600 text-xs font-black rounded-full w-6 h-6 flex items-center justify-center shadow-lg border-2 border-white dark:border-gray-900 animate-bounce">
+                  {wishlistCount}
+                </span>
+              )}
+            </Link>
+
+            {/* Cart Button */}
             <Link
               to="/cart"
-              className="bg-gradient-to-t from-purple-300 to-blue-400 hover:from-purple-400 hover:to-blue-500 transition-all duration-200 text-white py-1 px-4 rounded-full flex items-center gap-2"
+              className="relative bg-gradient-to-br from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 text-white py-2 px-4 rounded-full flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-110"
+              title="View Cart"
             >
-              <span className="hidden md:inline">Cart</span>
+              <span className="hidden lg:inline text-sm font-bold">Cart</span>
               <FaCartShopping className="text-lg" />
+              {cartItemCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-yellow-400 text-blue-600 text-xs font-black rounded-full w-6 h-6 flex items-center justify-center shadow-lg border-2 border-white dark:border-gray-900 animate-bounce">
+                  {cartItemCount}
+                </span>
+              )}
             </Link>
 
             <DarkMode />
@@ -91,30 +115,33 @@ const Navbar = ({ searchQuery, setSearchQuery, handleSearchSubmit }) => {
         </div>
       </div>
 
-      {/* Desktop Navigation */}
-      <div className="hidden sm:flex justify-center items-center gap-6 py-3">
+      {/* Premium Desktop Navigation */}
+      <div className="hidden sm:flex justify-center items-center gap-8 py-4 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800">
         {categories.map((category) => (
           <Link
             key={category.id}
             to={category.link}
-            className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+            onClick={() => setSearchQuery("")}
+            className="relative text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-sm font-semibold transition-all duration-300 group"
           >
             {category.name}
+            <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 group-hover:w-full transition-all duration-300 rounded-full"></span>
           </Link>
         ))}
 
-        {/* Trending Dropdown */}
+        {/* Trending Dropdown - Premium */}
         <div className="group relative">
-          <button className="flex items-center text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+          <button className="flex items-center text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-sm font-semibold transition-all duration-300">
             Trending
-            <FaCaretDown className="ml-1 transition-transform duration-200 group-hover:rotate-180" />
+            <FaCaretDown className="ml-2 transition-transform duration-300 group-hover:rotate-180 text-xs" />
           </button>
-          <div className="absolute z-10 hidden group-hover:block w-48 rounded-md shadow-lg bg-white dark:bg-gray-800 p-2">
+          <div className="absolute z-10 hidden group-hover:block w-56 rounded-xl shadow-2xl bg-white dark:bg-gray-800 p-3 border border-gray-100 dark:border-gray-700 animate-fadeInScale">
             {trendingDropdown.map((item) => (
               <Link
                 key={item.id}
                 to={item.link}
-                className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-indigo-100 dark:hover:bg-gray-700 rounded-md"
+                onClick={() => setSearchQuery("")}
+                className="block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg transition-all duration-200 font-medium"
               >
                 {item.name}
               </Link>
@@ -123,23 +150,23 @@ const Navbar = ({ searchQuery, setSearchQuery, handleSearchSubmit }) => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Premium Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="sm:hidden bg-white dark:bg-gray-800 px-4 py-2 shadow-lg">
-          <form onSubmit={handleSearch} className="relative mb-4">
+        <div className="sm:hidden bg-gradient-to-b from-white to-blue-50 dark:from-gray-800 dark:to-gray-900 px-4 py-4 shadow-2xl border-b border-gray-100 dark:border-gray-700 animate-slideInUp">
+          <form onSubmit={handleSearch} className="relative mb-6">
             <input
               type="text"
               placeholder="Search products..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full rounded-lg border border-gray-300 py-2 px-4 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+              className="w-full rounded-full py-3 px-4 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white bg-white shadow-md"
             />
             <button
               type="submit"
-              className="absolute right-3 top-1/2 transform -translate-y-1/2"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-blue-600 dark:text-blue-400"
               disabled={!searchQuery.trim()}
             >
-              <IoMdSearch className="text-gray-500 dark:text-gray-400" />
+              <IoMdSearch className="text-xl" />
             </button>
           </form>
 
@@ -147,22 +174,28 @@ const Navbar = ({ searchQuery, setSearchQuery, handleSearchSubmit }) => {
             <Link
               key={category.id}
               to={category.link}
-              className="block py-2 px-3 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-md text-base font-medium transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={() => {
+                setSearchQuery("");
+                setMobileMenuOpen(false);
+              }}
+              className="block py-3 px-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg text-base font-semibold transition-all duration-200 transform hover:translate-x-2"
             >
               {category.name}
             </Link>
           ))}
 
-          <div className="border-t border-gray-200 dark:border-gray-700 my-2" />
+          <div className="border-t border-gray-200 dark:border-gray-700 my-4" />
 
-          <p className="px-3 py-2 text-sm font-medium text-gray-500 dark:text-gray-400">Trending</p>
+          <p className="px-4 py-3 text-sm font-bold text-gray-600 dark:text-gray-400 uppercase tracking-widest">Trending</p>
           {trendingDropdown.map((item) => (
             <Link
               key={item.id}
               to={item.link}
-              className="block py-2 px-6 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-md text-sm font-medium transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={() => {
+                setSearchQuery("");
+                setMobileMenuOpen(false);
+              }}
+              className="block py-2 px-8 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg text-sm font-semibold transition-all duration-200"
             >
               {item.name}
             </Link>

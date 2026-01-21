@@ -1,0 +1,128 @@
+/* src/components/atoms/Price.css */
+/* ============================================================
+   Price Component Styles - Trust & Clarity Focused
+   ============================================================ */
+
+.price {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.price__container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex-wrap: wrap;
+}
+
+/* Original Price (Strikethrough) */
+.price__original {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+  text-decoration: line-through;
+  font-weight: 400;
+}
+
+/* Separator Arrow */
+.price__separator {
+  color: var(--text-tertiary);
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+/* Sale Price (Prominent) */
+.price__sale {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-sale);
+  line-height: 1;
+}
+
+/* Discount Badge */
+.price__discount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-sale-light);
+  color: var(--color-sale);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+/* Savings Text */
+.price__savings {
+  font-size: 0.875rem;
+  color: var(--color-success);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ========== VARIANTS ========== */
+
+/* Large (Product Detail) */
+.price--lg .price__sale {
+  font-size: 2rem;
+}
+
+.price--lg .price__original {
+  font-size: 1rem;
+}
+
+/* Small (Product List) */
+.price--sm .price__sale {
+  font-size: 1.125rem;
+}
+
+.price--sm .price__original {
+  font-size: 0.75rem;
+}
+
+/* ========== NO DISCOUNT STATE ========== */
+
+.price--no-discount .price__container {
+  gap: 0;
+}
+
+.price--no-discount .price__separator,
+.price--no-discount .price__discount,
+.price--no-discount .price__original {
+  display: none;
+}
+
+/* ========== DARK MODE (Optional) ========== */
+/* @media (prefers-color-scheme: dark) {
+  .price__original {
+    color: var(--color-neutral-500);
+  }
+
+  .price__separator {
+    color: var(--color-neutral-600);
+  }
+
+  .price__discount {
+    background-color: rgba(220, 38, 38, 0.1);
+  }
+} */
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 480px) {
+  .price__container {
+    gap: 0.5rem;
+  }
+
+  .price__sale {
+    font-size: 1.25rem;
+  }
+
+  .price__discount {
+    margin-left: 0;
+    flex-basis: 100%;
+    margin-top: var(--space-1);
+  }
+}

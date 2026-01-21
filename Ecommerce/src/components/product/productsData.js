@@ -166,7 +166,7 @@ const productsData = [
     rating: 1,
     reviews: 473,
     isTopRated: true,
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop",
+    image: "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500&h=500&fit=crop",
     onSale: true,
     trending: true,
     description: "High-quality electronic gadget with advanced features."

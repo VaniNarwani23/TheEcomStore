@@ -1,0 +1,156 @@
+/* src/components/atoms/Rating.css */
+/* ============================================================
+   Rating Component Styles - Trust Signal
+   ============================================================ */
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--body-sm-size);
+}
+
+.rating__stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  position: relative;
+}
+
+/* Star Styling */
+.rating__star {
+  color: #F59E0B;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.rating__star--full {
+  color: #F59E0B;
+}
+
+.rating__star--empty {
+  color: var(--color-neutral-300);
+}
+
+/* Half Star Container */
+.rating__star-half {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.rating__star-half .rating__star:first-child {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 8px;
+  color: #F59E0B;
+}
+
+.rating__star-half .rating__star:last-child {
+  color: var(--color-neutral-300);
+}
+
+/* Rating Info */
+.rating__info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  white-space: nowrap;
+}
+
+.rating__value {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.rating__separator {
+  color: var(--text-tertiary);
+}
+
+.rating__count {
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color var(--transition-base);
+}
+
+/* ========== INTERACTIVE STATE ========== */
+
+.rating--interactive {
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.rating--interactive:hover {
+  color: var(--text-primary);
+}
+
+.rating--interactive:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.rating--interactive .rating__count {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color var(--transition-base);
+}
+
+.rating--interactive:hover .rating__count {
+  text-decoration-color: currentColor;
+}
+
+/* ========== SIZE VARIANTS ========== */
+
+/* Small */
+.rating--sm .rating__star {
+  width: 12px;
+  height: 12px;
+}
+
+.rating--sm {
+  font-size: 0.75rem;
+}
+
+/* Large */
+.rating--lg .rating__star {
+  width: 20px;
+  height: 20px;
+}
+
+.rating--lg {
+  font-size: 1rem;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 480px) {
+  .rating {
+    font-size: 0.875rem;
+  }
+
+  .rating__star {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* ========== DARK MODE (Optional) ========== */
+/* @media (prefers-color-scheme: dark) {
+  .rating__star--empty {
+    color: var(--color-neutral-600);
+  }
+
+  .rating__value {
+    color: white;
+  }
+
+  .rating__count {
+    color: var(--color-neutral-400);
+  }
+} */

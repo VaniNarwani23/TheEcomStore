@@ -2,7 +2,7 @@ import React from 'react';
 import ProductCard from '../product/ProductCard';
 import productsData from '../product/products';
 
-const BestSelling = ({ handleOrderPopup, searchQuery = "" }) => {
+const BestSelling = ({ handleOrderPopup, searchQuery = "", addToCart, toggleWishlist, isWishlisted }) => {
   const filteredProducts = productsData.filter((product) => {
     return (
       product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -41,7 +41,9 @@ const BestSelling = ({ handleOrderPopup, searchQuery = "" }) => {
               key={product.id}
               product={product}
               showBestSellerBadge={true}
-              handleOrderPopup={handleOrderPopup}
+              addToCart={addToCart}
+              toggleWishlist={toggleWishlist}
+              isWishlisted={isWishlisted}
             />
           ))}
         </div>

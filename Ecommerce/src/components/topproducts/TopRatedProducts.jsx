@@ -2,7 +2,7 @@ import React from "react";
 import ProductCard from "../product/ProductCard";
 import productsData from "../product/products";
 
-const TopProducts = ({ handleOrderPopup, searchQuery = "" }) => {
+const TopProducts = ({ handleOrderPopup, searchQuery = "", addToCart, toggleWishlist, isWishlisted }) => {
   const topProducts = productsData.filter((product) => {
     const isTopRated = product.isTopRated;
     const searchMatch =
@@ -32,7 +32,9 @@ const TopProducts = ({ handleOrderPopup, searchQuery = "" }) => {
             <ProductCard
               key={product.id}
               product={product}
-              handleOrderPopup={handleOrderPopup}
+              addToCart={addToCart}
+              toggleWishlist={toggleWishlist}
+              isWishlisted={isWishlisted}
             />
           ))}
         </div>

@@ -2,7 +2,7 @@ import React from "react";
 import ProductCard from "../product/ProductCard";
 import productsData from "../product/products"; // Ensure correct path
 
-const WomensClothing = ({ handleOrderPopup, searchQuery = "" }) => {
+const WomensClothing = ({ handleOrderPopup, searchQuery = "", addToCart, toggleWishlist, isWishlisted }) => {
   // Filter products by category and search query
   const filteredProducts = productsData.filter((product) => {
     const categoryMatch = product.category === "women";
@@ -36,7 +36,9 @@ const WomensClothing = ({ handleOrderPopup, searchQuery = "" }) => {
             <ProductCard
               key={product.id}
               product={product}
-              handleOrderPopup={handleOrderPopup}
+              addToCart={addToCart}
+              toggleWishlist={toggleWishlist}
+              isWishlisted={isWishlisted}
             />
           ))}
         </div>
