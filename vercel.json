@@ -1,0 +1,12 @@
+{
+  "buildCommand": "cd Ecommerce && npm install && npm run build",
+  "installCommand": "cd Ecommerce && npm install",
+  "outputDirectory": "Ecommerce/dist",
+  "cleanUrls": true,
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "Ecommerce/dist/index.html"
+    }
+  ]
+}
