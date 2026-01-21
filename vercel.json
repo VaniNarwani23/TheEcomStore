@@ -1,8 +1,6 @@
 {
-  "outputDirectory": "Ecommerce/dist",
-  "installCommand": "npm install",
-  "buildCommand": "npm run build",
-  "env": {
-    "NODE_ENV": "production"
-  }
+  "buildCommand": "cd Ecommerce && npm run build",
+  "installCommand": "cd Ecommerce && npm install",
+  "devCommand": "cd Ecommerce && npm run dev",
+  "outputDirectory": "Ecommerce/dist"
 }
