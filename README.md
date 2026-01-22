@@ -17,34 +17,34 @@ This project focuses on **clarity, performance, maintainability, and user experi
 
 ## ✨ Features
 
-- 🧭 Product listing with clean UI
-- 🔍 Category-based browsing
-- 🛒 Shopping cart functionality
-- 📱 Fully responsive (mobile & desktop)
-- ⚡ Fast page loads & optimized rendering
-- 🌐 Deployed and accessible publicly
-- 🧩 Modular and reusable components
-- 🔐 Scalable architecture ready for auth & payments
+- 🧭 Product listing with clean UI  
+- 🔍 Category-based browsing  
+- 🛒 Shopping cart functionality  
+- 📱 Fully responsive (mobile & desktop)  
+- ⚡ Fast page loads & optimized rendering  
+- 🌐 Deployed and accessible publicly  
+- 🧩 Modular and reusable components  
+- 🔐 Scalable architecture ready for auth & payments  
 
 ---
 
 ## 🛠️ Tech Stack
 
-**Frontend**
+### Frontend
 - React / Next.js
 - Modern JavaScript (ES6+)
 - Responsive UI principles
 
-**Styling**
-- CSS / Tailwind CSS (if used)
+### Styling
+- CSS / Tailwind CSS
 
-**Backend / APIs**
-- Node.js / API routes (if applicable)
+### Backend / APIs
+- Node.js / API Routes
 
-**Deployment**
-- Vercel (Production hosting)
+### Deployment
+- Vercel (Production Hosting)
 
-**Tools**
+### Tools
 - Git & GitHub
 - Environment-based configuration
 
@@ -52,18 +52,19 @@ This project focuses on **clarity, performance, maintainability, and user experi
 
 ## 🧠 Engineering Highlights
 
-- Clean folder structure following industry standards
-- Reusable and maintainable components
-- Separation of concerns (UI, logic, data)
-- Production-style deployment pipeline
-- Optimized for performance and scalability
+- Clean folder structure following industry standards  
+- Reusable and maintainable components  
+- Separation of concerns (UI, logic, data)  
+- Production-style deployment pipeline  
+- Optimized for performance and scalability  
 
 This project is intentionally designed to resemble **real company-level applications**, not just a demo app.
 
 ---
 
 ## 📸 Screenshots
-<img width="1919" height="859" alt="image" src="https://github.com/user-attachments/assets/e5f3d61e-cbce-4e11-9927-88745aed938c" />
+
+<img width="1919" height="859" alt="E-Commerce App Screenshot" src="https://github.com/user-attachments/assets/e5f3d61e-cbce-4e11-9927-88745aed938c" />
 
 ---
 
@@ -73,7 +74,7 @@ This project is intentionally designed to resemble **real company-level applicat
 # Clone the repository
 git clone https://github.com/your-username/your-repo.git
 
-# Navigate to project
+# Navigate to project directory
 cd Ecommerce
 
 # Install dependencies
@@ -81,7 +82,7 @@ npm install
 
 # Start development server
 npm run dev
-Open http://localhost:3000 in your browser. 
+Open http://localhost:3000 in your browser.
 
 📈 Future Enhancements
 User authentication (JWT / OAuth)
@@ -94,12 +95,10 @@ Order history & tracking
 
 Database-backed products
 
-Improved SEO & analytics```
----
+Improved SEO & analytics
 
-##👨‍💻 Author
-Vani Narwani -Full-Stack Developer
+👨‍💻 Author
+Vani Narwani
+Full-Stack Developer
+
 Passionate about building scalable, user-centric web applications and continuously improving engineering skills through real-world projects.
-
-⭐ If you like this project
-Give the repository a ⭐ and feel free to fork or contribute.
