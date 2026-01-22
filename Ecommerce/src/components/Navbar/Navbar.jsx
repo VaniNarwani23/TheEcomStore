@@ -3,7 +3,7 @@ import { IoMdSearch } from 'react-icons/io';
 import { FaCartShopping, FaCaretDown, FaHeart } from 'react-icons/fa6';
 import { FiShoppingBag } from 'react-icons/fi';
 import { Link, useNavigate } from 'react-router-dom';
-import DarkMode from './Darkmode';
+import DarkMode from './DarkMode';
 
 const Navbar = ({ searchQuery, setSearchQuery, handleSearchSubmit, cartItemCount = 0, wishlistCount = 0 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
