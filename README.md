@@ -74,7 +74,7 @@ This project is intentionally designed to resemble **real company-level applicat
 git clone https://github.com/your-username/your-repo.git
 
 # Navigate to project
-cd your-repo
+cd Ecommerce
 
 # Install dependencies
 npm install
