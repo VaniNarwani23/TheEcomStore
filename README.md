@@ -70,7 +70,7 @@ This project is intentionally designed to resemble **real company-level applicat
 
 ## ⚙️ Local Setup
 
-```bash
+```bash 
 # Clone the repository
 git clone https://github.com/your-username/your-repo.git
 
@@ -102,3 +102,4 @@ Vani Narwani
 Full-Stack Developer
 
 Passionate about building scalable, user-centric web applications and continuously improving engineering skills through real-world projects.
+If you like this project, give the repository a ⭐ and feel free to fork or contribute.
