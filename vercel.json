@@ -1,6 +1,6 @@
 {
-  "buildCommand": "cd Ecommerce && npm run build",
-  "installCommand": "cd Ecommerce && npm install",
-  "devCommand": "cd Ecommerce && npm run dev",
+  "buildCommand": "cd Ecommerce && yarn build",
+  "installCommand": "cd Ecommerce && yarn install",
+  "devCommand": "cd Ecommerce && yarn dev",
   "outputDirectory": "Ecommerce/dist"
 }
