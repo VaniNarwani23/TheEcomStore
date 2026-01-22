@@ -81,7 +81,7 @@ npm install
 
 # Start development server
 npm run dev
-Open http://localhost:3000 in your browser.
+Open http://localhost:3000 in your browser. 
 
 📈 Future Enhancements
 User authentication (JWT / OAuth)
@@ -94,9 +94,10 @@ Order history & tracking
 
 Database-backed products
 
-Improved SEO & analytics
+Improved SEO & analytics```
+---
 
-👨‍💻 Author
+##👨‍💻 Author
 Vani Narwani -Full-Stack Developer
 Passionate about building scalable, user-centric web applications and continuously improving engineering skills through real-world projects.
 
