@@ -98,7 +98,7 @@ const Banner = ({ onNavigate }) => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-white via-gray-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700">
+    <div className="bg-white dark:bg-gray-900">
       {/* Main Banner Slider */}
       <section className="relative overflow-hidden">
         <div className="relative h-96 md:h-[500px]">
@@ -139,7 +139,7 @@ const Banner = ({ onNavigate }) => {
                       
                       <button
                         onClick={() => handleCategoryClick(slide.link)}
-                        className="inline-block bg-white text-gray-900 font-bold px-8 py-4 rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 text-lg cursor-pointer"
+                        className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-md transition-colors duration-200 shadow-md hover:shadow-lg text-base cursor-pointer"
                       >
                         {slide.buttonText}
                       </button>
@@ -181,13 +181,13 @@ const Banner = ({ onNavigate }) => {
       </section>
 
       {/* Features Bar */}
-      <section className="py-6 bg-gray-50 dark:bg-gray-800">
+      <section className="py-6 bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {features.map((feature, index) => (
               <div key={index} className="flex items-center gap-3">
-                <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
-                  <feature.icon className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                <div className="p-2 bg-gray-200 dark:bg-gray-700 rounded-md">
+                  <feature.icon className="w-5 h-5 text-gray-700 dark:text-gray-300" />
                 </div>
                 <div>
                   <h3 className="font-medium text-gray-900 dark:text-white text-sm">{feature.title}</h3>

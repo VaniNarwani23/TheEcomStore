@@ -485,7 +485,7 @@ const Products = ({ handleOrderPopup, searchQuery = "", addToCart, toggleWishlis
   ];
 
   return (
-    <section className="container mx-auto px-4 py-8 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800" data-aos="fade-up">
+    <section className="container mx-auto px-4 py-8 bg-white dark:bg-gray-900" data-aos="fade-up">
       {/* Header with Search Results and Controls */}
       <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-6 mb-6 backdrop-blur-sm">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-6">
@@ -511,9 +511,9 @@ const Products = ({ handleOrderPopup, searchQuery = "", addToCart, toggleWishlis
           <div className="flex items-center gap-2">
           <button
               onClick={() => setViewMode("grid")}
-              className={`p-2 rounded-lg transition-colors duration-200 ${
+              className={`p-2 rounded-md transition-colors duration-200 ${
                 viewMode === "grid" 
-                  ? "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400" 
+                  ? "bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400" 
                   : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600"
               }`}
               title="Grid view"
@@ -524,9 +524,9 @@ const Products = ({ handleOrderPopup, searchQuery = "", addToCart, toggleWishlis
           </button>
           <button
               onClick={() => setViewMode("list")}
-              className={`p-2 rounded-lg transition-colors duration-200 ${
+              className={`p-2 rounded-md transition-colors duration-200 ${
                 viewMode === "list" 
-                  ? "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400" 
+                  ? "bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400" 
                   : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600"
               }`}
               title="List view"

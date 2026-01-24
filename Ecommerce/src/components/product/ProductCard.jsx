@@ -97,7 +97,7 @@ const ProductCard = ({ product, addToCart, toggleWishlist, isWishlisted }) => {
       {/* Content Section */}
       <div className="p-4 flex flex-col flex-grow">
         {/* Category Badge */}
-        <div className="text-xs text-blue-600 dark:text-blue-400 font-bold mb-2 uppercase tracking-widest bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded-full w-fit">
+        <div className="text-xs text-gray-600 dark:text-gray-400 font-medium mb-2 uppercase tracking-wide bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded w-fit">
           {product.category}
         </div>
         
@@ -116,8 +116,8 @@ const ProductCard = ({ product, addToCart, toggleWishlist, isWishlisted }) => {
           </span>
         </div>
         
-        {/* Price Section - Premium Layout */}
-        <div className="mb-4 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl p-3">
+        {/* Price Section - Professional Layout */}
+        <div className="mb-4 bg-gray-50 dark:bg-gray-800 rounded-md p-3">
           <div className="flex items-baseline gap-2 mb-1">
             <span className="text-2xl font-black text-gray-900 dark:text-white">
               ₹{productPrice.toLocaleString()}
@@ -139,11 +139,11 @@ const ProductCard = ({ product, addToCart, toggleWishlist, isWishlisted }) => {
         
         {/* Features - Trust Indicators */}
         <div className="flex items-center gap-2 mb-4 text-xs text-gray-600 dark:text-gray-400 flex-wrap">
-          <div className="flex items-center gap-1 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 px-2 py-1 rounded-md font-semibold">
+          <div className="flex items-center gap-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-1 rounded font-medium">
             <FaTruck className="w-3 h-3" />
             Free Delivery
           </div>
-          <div className="flex items-center gap-1 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400 px-2 py-1 rounded-md font-semibold">
+          <div className="flex items-center gap-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-1 rounded font-medium">
             <FaShieldAlt className="w-3 h-3" />
             Secure
           </div>
@@ -154,9 +154,9 @@ const ProductCard = ({ product, addToCart, toggleWishlist, isWishlisted }) => {
           <button
             onClick={() => addToCart && addToCart(product)}
             disabled={!addToCart}
-            className={`w-full py-3 px-4 rounded-xl font-bold transition-all duration-300 flex items-center justify-center gap-2 text-sm transform hover:scale-105 ${
+            className={`w-full py-2.5 px-4 rounded-md font-medium transition-colors duration-200 flex items-center justify-center gap-2 text-sm ${
               addToCart 
-                ? 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl' 
+                ? 'bg-orange-500 hover:bg-orange-600 text-white shadow-sm hover:shadow-md' 
                 : 'bg-gray-300 dark:bg-gray-700 text-gray-500 dark:text-gray-300 cursor-not-allowed'
             }`}
           >

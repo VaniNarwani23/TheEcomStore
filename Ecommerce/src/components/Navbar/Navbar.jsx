@@ -33,30 +33,30 @@ const Navbar = ({ searchQuery, setSearchQuery, handleSearchSubmit, cartItemCount
   };
 
   return (
-    <div className="shadow-lg bg-gradient-to-r from-white via-blue-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 duration-200 sticky top-0 z-40 border-b border-gray-200/50 dark:border-gray-700/50 backdrop-blur-sm">
-      {/* Premium Top Bar */}
-      <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 dark:from-purple-800 dark:via-blue-800 dark:to-indigo-800 py-2 shadow-md">
+    <div className="shadow-md bg-white dark:bg-gray-900 duration-200 sticky top-0 z-40 border-b border-gray-200 dark:border-gray-800">
+      {/* Professional Top Bar */}
+      <div className="bg-gray-900 dark:bg-gray-950 py-2.5 shadow-sm">
         <div className="container flex justify-between items-center gap-4 px-4">
           {/* Logo */}
           <Link to="/" className="font-bold text-xl flex gap-2 items-center group">
-            <div className="p-2 bg-white dark:bg-gray-900 rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110">
-              <FiShoppingBag size="24" className="text-blue-600 dark:text-blue-400" />
+            <div className="p-2 bg-white dark:bg-gray-800 rounded-md shadow-sm group-hover:shadow-md transition-all duration-200">
+              <FiShoppingBag size="24" className="text-orange-500 dark:text-orange-400" />
             </div>
-            <span className="text-white font-black tracking-wider hidden sm:inline">TheEcomStore</span>
+            <span className="text-white font-bold tracking-wide hidden sm:inline text-lg">TheEcomStore</span>
           </Link>
 
-          {/* Search - Desktop Enhanced */}
+          {/* Search - Desktop Professional */}
           <form onSubmit={handleSearch} className="relative group hidden sm:flex flex-1 max-w-2xl mx-4">
             <input
               type="text"
               placeholder="Search 1000+ products..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full rounded-full py-3 px-6 pr-12 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:border-white dark:border-gray-600 dark:bg-gray-800 dark:text-white bg-white shadow-lg hover:shadow-xl transition-all duration-300"
+              className="w-full rounded-l-md py-2.5 px-4 pr-12 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white bg-white"
             />
             <button
               type="submit"
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-yellow-300 transition-colors duration-300"
+              className="absolute right-0 top-0 bottom-0 px-4 bg-orange-500 hover:bg-orange-600 text-white rounded-r-md transition-colors duration-200"
               disabled={!searchQuery.trim()}
             >
               <IoMdSearch className="text-xl" />
@@ -68,13 +68,13 @@ const Navbar = ({ searchQuery, setSearchQuery, handleSearchSubmit, cartItemCount
             {/* Wishlist Button */}
             <Link
               to="/wishlist"
-              className="relative bg-gradient-to-br from-red-400 to-pink-500 hover:from-red-500 hover:to-pink-600 transition-all duration-300 text-white py-2 px-4 rounded-full flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-110 hidden sm:flex"
+              className="relative bg-gray-800 hover:bg-gray-700 transition-colors duration-200 text-white py-2 px-3 rounded-md flex items-center gap-2 hidden sm:flex"
               title="View Wishlist"
             >
-              <span className="hidden lg:inline text-sm font-bold">Wishlist</span>
-              <FaHeart className="text-lg animate-pulse-subtle" />
+              <span className="hidden lg:inline text-sm font-medium">Wishlist</span>
+              <FaHeart className="text-base" />
               {wishlistCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-yellow-400 text-red-600 text-xs font-black rounded-full w-6 h-6 flex items-center justify-center shadow-lg border-2 border-white dark:border-gray-900 animate-bounce">
+                <span className="absolute -top-1.5 -right-1.5 bg-orange-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
                   {wishlistCount}
                 </span>
               )}
@@ -83,13 +83,13 @@ const Navbar = ({ searchQuery, setSearchQuery, handleSearchSubmit, cartItemCount
             {/* Cart Button */}
             <Link
               to="/cart"
-              className="relative bg-gradient-to-br from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 text-white py-2 px-4 rounded-full flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-110"
+              className="relative bg-gray-800 hover:bg-gray-700 transition-colors duration-200 text-white py-2 px-3 rounded-md flex items-center gap-2"
               title="View Cart"
             >
-              <span className="hidden lg:inline text-sm font-bold">Cart</span>
-              <FaCartShopping className="text-lg" />
+              <span className="hidden lg:inline text-sm font-medium">Cart</span>
+              <FaCartShopping className="text-base" />
               {cartItemCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-yellow-400 text-blue-600 text-xs font-black rounded-full w-6 h-6 flex items-center justify-center shadow-lg border-2 border-white dark:border-gray-900 animate-bounce">
+                <span className="absolute -top-1.5 -right-1.5 bg-orange-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
                   {cartItemCount}
                 </span>
               )}
@@ -115,33 +115,33 @@ const Navbar = ({ searchQuery, setSearchQuery, handleSearchSubmit, cartItemCount
         </div>
       </div>
 
-      {/* Premium Desktop Navigation */}
-      <div className="hidden sm:flex justify-center items-center gap-8 py-4 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800">
+      {/* Professional Desktop Navigation */}
+      <div className="hidden sm:flex justify-center items-center gap-6 py-3 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
         {categories.map((category) => (
           <Link
             key={category.id}
             to={category.link}
             onClick={() => setSearchQuery("")}
-            className="relative text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-sm font-semibold transition-all duration-300 group"
+            className="relative text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 px-3 py-2 text-sm font-medium transition-colors duration-200 group"
           >
             {category.name}
-            <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 group-hover:w-full transition-all duration-300 rounded-full"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-200"></span>
           </Link>
         ))}
 
-        {/* Trending Dropdown - Premium */}
+        {/* Trending Dropdown - Professional */}
         <div className="group relative">
-          <button className="flex items-center text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-sm font-semibold transition-all duration-300">
+          <button className="flex items-center text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 px-3 py-2 text-sm font-medium transition-colors duration-200">
             Trending
-            <FaCaretDown className="ml-2 transition-transform duration-300 group-hover:rotate-180 text-xs" />
+            <FaCaretDown className="ml-2 transition-transform duration-200 group-hover:rotate-180 text-xs" />
           </button>
-          <div className="absolute z-10 hidden group-hover:block w-56 rounded-xl shadow-2xl bg-white dark:bg-gray-800 p-3 border border-gray-100 dark:border-gray-700 animate-fadeInScale">
+          <div className="absolute z-10 hidden group-hover:block w-56 rounded-md shadow-lg bg-white dark:bg-gray-800 p-2 border border-gray-200 dark:border-gray-700">
             {trendingDropdown.map((item) => (
               <Link
                 key={item.id}
                 to={item.link}
                 onClick={() => setSearchQuery("")}
-                className="block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg transition-all duration-200 font-medium"
+                className="block px-4 py-2.5 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-orange-600 dark:hover:text-orange-400 rounded transition-colors duration-200"
               >
                 {item.name}
               </Link>
@@ -150,9 +150,9 @@ const Navbar = ({ searchQuery, setSearchQuery, handleSearchSubmit, cartItemCount
         </div>
       </div>
 
-      {/* Premium Mobile Navigation */}
+      {/* Professional Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="sm:hidden bg-gradient-to-b from-white to-blue-50 dark:from-gray-800 dark:to-gray-900 px-4 py-4 shadow-2xl border-b border-gray-100 dark:border-gray-700 animate-slideInUp">
+        <div className="sm:hidden bg-white dark:bg-gray-900 px-4 py-4 shadow-lg border-b border-gray-200 dark:border-gray-800">
           <form onSubmit={handleSearch} className="relative mb-6">
             <input
               type="text"
@@ -178,7 +178,7 @@ const Navbar = ({ searchQuery, setSearchQuery, handleSearchSubmit, cartItemCount
                 setSearchQuery("");
                 setMobileMenuOpen(false);
               }}
-              className="block py-3 px-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg text-base font-semibold transition-all duration-200 transform hover:translate-x-2"
+              className="block py-3 px-4 text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md text-base font-medium transition-colors duration-200"
             >
               {category.name}
             </Link>
@@ -195,7 +195,7 @@ const Navbar = ({ searchQuery, setSearchQuery, handleSearchSubmit, cartItemCount
                 setSearchQuery("");
                 setMobileMenuOpen(false);
               }}
-              className="block py-2 px-8 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg text-sm font-semibold transition-all duration-200"
+              className="block py-2 px-8 text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md text-sm font-medium transition-colors duration-200"
             >
               {item.name}
             </Link>
