@@ -14,7 +14,7 @@ const MensClothing = ({ handleOrderPopup, searchQuery = "", addToCart, toggleWis
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-pink-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <div>
       {/* Premium Header Banner */}
       <div className="bg-gradient-to-r from-pink-500 to-red-500 dark:from-pink-700 dark:to-red-700 py-12 shadow-lg">
         <div className="container mx-auto px-4">

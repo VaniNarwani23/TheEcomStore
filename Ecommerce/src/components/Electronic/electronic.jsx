@@ -14,7 +14,7 @@ const Electronics = ({ handleOrderPopup, searchQuery = "", addToCart, toggleWish
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <div>
       {/* Premium Header Banner */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-800 dark:to-purple-800 py-12 shadow-lg">
         <div className="container mx-auto px-4">
